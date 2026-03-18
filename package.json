@@ -1,0 +1,58 @@
+{
+  "name": "melinda-ui-poistot",
+  "version": "1.0.0",
+  "description": "Melinda community ui for mass removal",
+  "author": "The National Library of Finland",
+  "license": "MIT",
+  "keywords": [
+    "ui-poistot",
+    "melinda",
+    "natlibfi"
+  ],
+  "homepage": "https://github.com/NatLibFi/melinda-ui-poistot#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NatLibFi/melinda-ui-poistot.git"
+  },
+  "bugs": {
+    "url": "https://github.com/NatLibFi/melinda-ui-poistot/issues"
+  },
+  "main": "src/index.js",
+  "type": "commonjs",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "start": "node dist/index.js",
+    "prepare": "npm run build",
+    "build": "node build.js",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "test": "npm run lint",
+    "test:base": "node --test --test-force-exit --experimental-test-coverage --test-reporter=spec './src/*.test.js'",
+    "dev": "cross-env DEBUG=@natlibfi/* NODE_ENV=test node --watch --test --experimental-test-coverage --test-reporter=spec './src/*.test.js'"
+  },
+  "dependencies": {
+    "@natlibfi/melinda-backend-commons": "^3.0.0",
+    "@natlibfi/melinda-commons": "^14.0.0",
+    "@natlibfi/melinda-record-import-commons": "^13.0.0",
+    "@natlibfi/melinda-rest-api-client": "^6.0.0",
+    "@natlibfi/melinda-ui-commons": "^6.0.0",
+    "@natlibfi/passport-melinda-aleph": "^4.0.0",
+    "@natlibfi/passport-melinda-jwt": "^3.0.0",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "debug": "^4.4.3",
+    "express": "^5.1.0",
+    "express-handlebars": "^8.0.3",
+    "express-openid-connect": "^2.19.2",
+    "openid-client": "^6.8.1",
+    "passport": "^0.7.0"
+  },
+  "devDependencies": {
+    "@natlibfi/fixugen": "^3.0.1",
+    "@natlibfi/fixura": "^4.0.1",
+    "esbuild": "^0.27.4",
+    "eslint": "^10.0.3"
+  }
+}

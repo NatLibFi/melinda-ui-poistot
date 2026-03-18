@@ -1,0 +1,96 @@
+#panels-wrapper fieldset {
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  border-color: var(--color-blue-100);
+}
+
+#panels-wrapper fieldset legend {
+  color: var(--color-blue-100);
+  font-size: var(--font-size-headline-small);
+  font-weight: var(--font-weight-title);
+}
+
+#panels-wrapper fieldset .id-list-title {
+  color: var(--color-blue-100);
+  font-family: var(--font-family-title);
+  font-size: var(--font-size-headline-extra-small);
+  font-weight: var(--font-weight-title);
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+#panels-wrapper Input,
+#panels-wrapper Select {
+  height: 30px;
+}
+
+#panels-wrapper .full-width {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  align-content: center;
+}
+
+#panels-wrapper .full-width label {
+  overflow: visible;
+  white-space: nowrap;
+}
+
+#panels-wrapper .full-width select {
+  width: inherit;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#panels-wrapper .full-width select option {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#idList .id-list-header {
+  font-weight: bold;
+  border-top: 3px solid darkslategrey;
+  border-bottom: 2px solid darkslategrey;
+}
+
+#idList .id-list-footer {
+  border-top: 3px solid darkslategrey;
+}
+
+#idList .row {
+  display: flex;
+  line-height: 1em;
+  font-family: var(--font-family-mono);
+}
+
+#idList .row-number {
+  display: inline-block;
+  min-width: 3em;
+  text-align: end;
+  padding-right: 3px;
+  background-color: lightgray;
+  color: darkslategrey;
+  border-right: 2px solid darkslategrey;
+  margin-right: 10px;
+}
+
+#idList .flex-spacer {
+  flex-grow: 3;
+  flex-shrink: 3;
+}
+
+#idList .info {
+  text-align: end;
+  padding-right: 3px;
+  color: darkslategrey;
+}
+
+#idList.raw {
+  text-wrap: wrap;
+}

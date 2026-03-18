@@ -1,0 +1,40 @@
+<!-- -------------------------------------------------------------------------- -->
+<!-- Poistot body -->
+<!-- -------------------------------------------------------------------------- -->
+
+<div id="bodywrapper" class="viewport-full flex-column">
+
+  <!-- ------------------------------------------------------------------------ -->
+  <!-- Navigation bar -->
+  {{> sharedPartials/navbar }}
+
+  <!-- ------------------------------------------------------------------------ -->
+  <!-- Progress bar -->
+  <div id="progressbar" class="progress-bar-inactive"></div>
+
+  <!-- ------------------------------------------------------------------------ -->
+  <!-- Application -->
+  <div id="root">
+
+    <!-- ---------------------------------------------------------------------- -->
+    <!-- poistot tab -->
+    <div id="poistotTab" class="tab-wrap">
+      <!-- Dialog popup for uploading files -->
+      {{> localPartials/dialogFileUpload}}
+
+      <!-- Two panels for viewing list and docs -->
+      <div id="panels-wrapper">
+        {{> localPartials/panelIdList}}
+        {{> localPartials/panelDocs}}
+      </div>
+    </div>
+    <!-- poistot tab end -->
+
+    <!-- For displaying info messages and errors to user -->
+    {{> sharedPartials/snackbars }}
+
+  </div>
+
+  <!-- ------------------------------------------------------------------------ -->
+  <!-- Footer -->
+  {{> sharedPartials/footer }}

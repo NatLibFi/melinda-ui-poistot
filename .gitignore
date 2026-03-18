@@ -1,0 +1,32 @@
+# dotenv environment variables file
+.env
+.env*
+
+# dependency directories
+node_modules/
+
+# build files
+dist
+
+# common temp files
+tmp
+
+# c8 reports
+coverage/
+
+# optional eslint cache
+.eslintcache
+
+# optional npm cache directory
+.npm
+
+# optional REPL history
+.node_repl_history
+
+# VSCode settings
+.vscode
+
+# OSX files
+.DS_Store
+
+test/

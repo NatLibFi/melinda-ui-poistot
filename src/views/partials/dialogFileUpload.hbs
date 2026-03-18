@@ -1,0 +1,59 @@
+<!-- [File upload partial (dialogFileUpload.hbs)] -->
+
+<dialog id="dialogForUpload">
+  <form method="dialog">
+
+    <div class="dialog-icon material-icons">
+      upload_file
+    </div>
+
+    <div class="dialog-headline">
+      Avaa tiedosto
+    </div>
+
+    <div class="dialog-supporting-text">
+
+      <div class="form-field-container full-width">
+        <input type="file" id="fileUpload" accept=".txt" style="display:none" />
+        <button id="fileSelect" type="button" class="file-button" onclick="return openFileBrowse(event)">Selaa</button>
+        <div id="selectedFileName" class="file-name">Ei valittua tiedostoa</div>
+        <button id="clearFileSelect" type="button" class="material-icons close-button small icon-only"
+          title="Poista valittu tiedosto" onclick="return clearSelectedFile(event)" style="display: none">close</button>
+      </div>
+      <hr>
+      <div class="instructions-headline">
+        <div>
+          OHJEET
+        </div>
+        <button id="showInstructionsButton" onclick="return showInstructions(event)"
+          class="material-icons tooltip icon-only" tooltip-text="Näytä">expand_more</button>
+        <button id="hideInstructionsButton" onclick="return hideInstructions(event)"
+          class="material-icons tooltip icon-only" tooltip-text="Piilota" style="display: none">expand_less</button>
+      </div>
+
+      <div id="instructions" style="display: none">
+        <ul>
+          <li>Valitse tiedosto selaamalla omalta laitteeltasi.</li>
+          <li>
+            Tiedoston on oltava tekstitiedosto (.txt pääte).
+          </li>
+          <li>
+            Tiedoston tulee olla rivitetty niin, että kunkin käsiteltävän tietueen tunnisteet ovat omalla rivillään.
+          </li>
+          <li>
+            Klikkaa 'Avaa tiedosto', jolloin tietuelistaus avautuu tarkistettuna Poistot-näkymään.
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="dialog-actions">
+      <button class="dialog-cancel-button alternate-red" id="cancelUploadButton"
+        onclick="return cancelUpload(event)">Peruuta</button>
+      <button class="dialog-confirm-button" id="confirmUploadButton" title="Valitse ensin tiedosto" disabled="true"
+        onclick="return confirmUpload(event)">Avaa tiedosto</button>
+    </div>
+
+  </form>
+</dialog>

@@ -1,0 +1,18 @@
+.exampleBlock {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-grey-60);
+  padding-left: 8px;
+}
+
+.exampleBlock span {
+  font-family: var(--font-family-mono);
+}
+
+.exampleBlock .legend {
+  font-family: var(--font-family-title);
+}
+
+.exampleBlock .error {
+  text-decoration: line-through;
+}

@@ -1,0 +1,82 @@
+<div class="column">
+  <form id="tietuetunniste-poistopyynto-form" class="form-content">
+    <div class="fill-card">
+      <div class="card-header">
+        <div class="card-header-icon"><span class="material-icons">description</span></div>
+        <div class="card-header-title">Tietokantatunnusten poisto</div>
+        <div class="card-header-flex-filler"></div>
+      </div> <!-- Header -->
+      <div class="card-content fill">
+        <fieldset>
+          <legend>Asetukset</legend>
+          <div id="lowTags" class="form-field-container combobox full-width">
+            <label>Poistettava tietokantatunnus (LOW): </label>
+            <div class="input-wrapper">
+              <input type="text" placeholder="Hae poistettava tietokantatunnus">
+              <select name="libraryTag">
+                {{#each lowTags}}
+                <option value="{{this}}">{{this}}</option>
+                {{/each}}
+              </select>
+              <button class="icon-only">
+                <span class="material-icons"></span>
+              </button>
+            </div>
+            <div class="custom-wrapper"></div>
+          </div>
+          <div class="form-content-section direction-column">
+            <div class="form-field-container checkbox full-width"">
+              <div class=" label-wrapper">
+              <label for="recordReplication">
+                <div class="input-wrapper">
+                  <input type="checkbox" id="recordReplication" name="recordReplication" />
+                  <span class="material-icons"></span>
+                </div>
+                Poistojen replikoituminen paikalliskantaan
+              </label>
+            </div>
+          </div>
+          <div class="form-field-container checkbox full-width">
+            <div class="label-wrapper">
+              <label for="recordRemoval">
+                <div class="input-wrapper">
+                  <input type="checkbox" id="recordRemoval" name="recordRemoval" />
+                  <span class="material-icons"></span>
+                </div>
+                Tietueen poisto, jos siihen ei jää yhtään tietokantatunnusta
+              </label>
+            </div>
+          </div>
+          <div class="form-field-container checkbox full-width" disabled="true">
+            <div class="label-wrapper">
+              <label for="subrecordHandlind">
+                <div class="input-wrapper">
+                  <input type="checkbox" id="subrecordHandlind" name="subrecordHandlind" disabled />
+                  <span class="material-icons"></span>
+                </div>
+                Poista myös osakohteista (Ei vielä käytössä)
+              </label>
+            </div>
+          </div>
+      </div>
+      </fieldset>
+      <fieldset>
+        <legend>Tietuetunnistetiedosto</legend>
+        <button id="import-tietuetunniste-poistopyynto-form" class="icon-on-left" tooltip-text="Avaa tiedosto"
+          type="button" onclick="return uploadFile(event)"><span class="material-icons">file_open</span>Avaa
+          tiedosto</button>
+      </fieldset>
+      <fieldset>
+        <legend>Lisätty tiedosto</legend>
+        <div id="idList"></div>
+      </fieldset>
+    </div> <!-- Content -->
+    <div class="card-footer">
+      <button type="reset" id="reset-tietuetunniste-poistopyynto-form" class="icon-on-left alternate-red"><span
+          class="material-icons">delete_outline</span>Tyhjennä lomake</button>
+      <button id="submit-tietuetunniste-poistopyynto-form" class="icon-on-left" type="submit"><span
+          class="material-icons">send</span>Lähetä</button>
+    </div> <!-- Footer -->
+</div> <!-- Card -->
+</form>
+</div> <!-- Column -->
